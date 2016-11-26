@@ -1,1 +1,12 @@
-# A web crawling script in NodeJs
+A web crawler build using NodeJs.
+
+Pre-requisit
+  - Node
+  - Cherio
+  - Request
+  - fs
+  
+This applications find all the hyperlinks (absolute and relative ). Absolute hyperlinks are url which are in format 
+"http://www.sampl-url.com", and relative url are of format "/nextpage/". Since this crawler is written to crawl a social website 
+hence it contains plenty other hyperlinks apart from the domain on which we are crawling. The final output of the crawling is stored
+in a .csv file which by defaults take stores the file in "/tmp" of system.
