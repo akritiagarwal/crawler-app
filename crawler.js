@@ -4,7 +4,7 @@ var URL = require('url-parse');
 var fs = require('fs');
 
 var START_URL = "http://www.medium.com";
-var MAX_PAGES_TO_VISIT = 10;
+var MAX_PAGES_TO_VISIT = 5;
 
 var pagesVisited = {};
 var numPagesVisited = 0;
@@ -25,7 +25,6 @@ function crawl() {
   if (nextPage in pagesVisited) {
     // We've already visited this page, so repeat the crawl
     crawl();
-    finalPageList.push(nextPage);
   } else {
     // New page we haven't visited
     visitPage(nextPage, crawl);
